@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/tmdb-challenge/static/css/main.9fcbd168.css",
+    "main.js": "/tmdb-challenge/static/js/main.e9695a81.js",
+    "static/media/company-logo.png": "/tmdb-challenge/static/media/company-logo.e6eb5619e46a23894362.png",
+    "static/media/rotten_tomatoes-logo.png": "/tmdb-challenge/static/media/rotten_tomatoes-logo.052742e1e45cc571a3c4.png",
+    "static/media/imdb-logo.png": "/tmdb-challenge/static/media/imdb-logo.1fd6c3b4360078e11b0d.png",
+    "static/media/iconoir_cinema-old.svg": "/tmdb-challenge/static/media/iconoir_cinema-old.b89e7310beb09e95ab5b2c8e7f6f87ec.svg",
+    "static/media/thumb_up-icon.svg": "/tmdb-challenge/static/media/thumb_up-icon.8be8854d204a983f803b561f70ebc704.svg",
+    "index.html": "/tmdb-challenge/index.html",
+    "static/media/share-icon.svg": "/tmdb-challenge/static/media/share-icon.df2a386b572e04bf98ce0b3da424ad1b.svg",
+    "static/media/star-icon.svg": "/tmdb-challenge/static/media/star-icon.5b65cfe4a0dc1382d848ce60efb97085.svg",
+    "static/media/play-icon.svg": "/tmdb-challenge/static/media/play-icon.dc1ca7e3180e35aa1c3b9f1a9315d7a4.svg",
+    "static/media/download-icon.svg": "/tmdb-challenge/static/media/download-icon.79887ac09343f224a80dc149580b1680.svg",
+    "static/media/bookmark-icon.svg": "/tmdb-challenge/static/media/bookmark-icon.7c45200dda884d3202afeefd4fbbc322.svg",
+    "main.9fcbd168.css.map": "/tmdb-challenge/static/css/main.9fcbd168.css.map",
+    "main.e9695a81.js.map": "/tmdb-challenge/static/js/main.e9695a81.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9fcbd168.css",
+    "static/js/main.e9695a81.js"
+  ]
+}
