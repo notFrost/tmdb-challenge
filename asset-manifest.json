@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tmdb-challenge/static/css/main.9fcbd168.css",
-    "main.js": "/tmdb-challenge/static/js/main.e9695a81.js",
+    "main.js": "/tmdb-challenge/static/js/main.1c5484a2.js",
     "static/media/company-logo.png": "/tmdb-challenge/static/media/company-logo.e6eb5619e46a23894362.png",
     "static/media/rotten_tomatoes-logo.png": "/tmdb-challenge/static/media/rotten_tomatoes-logo.052742e1e45cc571a3c4.png",
     "static/media/imdb-logo.png": "/tmdb-challenge/static/media/imdb-logo.1fd6c3b4360078e11b0d.png",
@@ -14,10 +14,10 @@
     "static/media/download-icon.svg": "/tmdb-challenge/static/media/download-icon.79887ac09343f224a80dc149580b1680.svg",
     "static/media/bookmark-icon.svg": "/tmdb-challenge/static/media/bookmark-icon.7c45200dda884d3202afeefd4fbbc322.svg",
     "main.9fcbd168.css.map": "/tmdb-challenge/static/css/main.9fcbd168.css.map",
-    "main.e9695a81.js.map": "/tmdb-challenge/static/js/main.e9695a81.js.map"
+    "main.1c5484a2.js.map": "/tmdb-challenge/static/js/main.1c5484a2.js.map"
   },
   "entrypoints": [
     "static/css/main.9fcbd168.css",
-    "static/js/main.e9695a81.js"
+    "static/js/main.1c5484a2.js"
   ]
 }
