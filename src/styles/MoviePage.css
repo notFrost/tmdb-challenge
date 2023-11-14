@@ -1,0 +1,36 @@
+.movie-body {
+  margin: 42px 72px;
+}
+.movie-body > p {
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.08px;
+}
+
+h4 {
+  color: #000;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: DM Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0.12px;
+}
+.yt-ratio {
+  --bs-aspect-ratio: calc((10 / 27) * 100%);
+}
+
+h3 {
+  color: #000;
+  font-family: DM Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.12px;
+}
