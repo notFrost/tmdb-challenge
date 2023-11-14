@@ -10,18 +10,17 @@ import {
 } from "react-router-dom";
 
 import "./style.css";
-import SimilarCard from "./components/SimilarCard.js";
+import ScrollToTop from "./services/scrollTopTop.js";
 
 export default function App() {
   return (
     <div>
-      <Router>
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/movie/:movieId" element={<MoviePage />} />
-          <Route path="*" element={<Navigate to="/home" />} />
-        </Routes>
-      </Router>
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/movie/:movieId" element={<MoviePage />} />
+        <Route path="*" element={<Navigate to="/home" />} />
+      </Routes>
+      <ScrollToTop />
     </div>
   );
 }

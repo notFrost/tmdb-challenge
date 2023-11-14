@@ -1,6 +1,13 @@
 .movie-body {
   margin: 42px 72px;
 }
+
+@media screen and (max-width: 767px) {
+  .movie-body {
+    margin: 42px 16px;
+  }
+}
+
 .movie-body > p {
   color: #000;
   font-family: Inter;
@@ -33,4 +40,14 @@ h3 {
   font-weight: 700;
   line-height: 32px;
   letter-spacing: 0.12px;
+}
+
+.media-container > p {
+  color: #000;
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.08px;
 }

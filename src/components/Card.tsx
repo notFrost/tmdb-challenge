@@ -4,7 +4,7 @@ import imdbLogo from "../images/imdb-logo.png";
 
 import "../styles/Card.css";
 
-export default function Card(props) {
+export default function Card(props : any) {
   return (
     <div className="card movie--card">
       <img
@@ -18,10 +18,10 @@ export default function Card(props) {
       <h5 className="card-title mb-12">{props.title}</h5>
       <div>
         <div className="row align-items-center mb-12 card-stats">
-          <img src={imdbLogo} className="card-logos"></img>
+          <img src={imdbLogo} className="card-logos" alt=""></img>
           <p className="col mb-0">{(props.rating * 10).toFixed(1)}/100</p>
           <div className="w-auto"></div>
-          <img src={rottenTomatoesLogo} className="card-logos"></img>
+          <img src={rottenTomatoesLogo} className="card-logos" alt=""></img>
           <p className="col-2 mb-0">
             {(props.rating * 10 + (Math.random() * 10 - 5)).toFixed(0)}%
           </p>

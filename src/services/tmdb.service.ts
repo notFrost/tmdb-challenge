@@ -25,6 +25,7 @@ export interface Cast {
   name: string;
   character: string;
   photo: string;
+  order: number;
 }
 
 export function getVideoByMovieId(id: number): Promise<string> {
@@ -53,6 +54,7 @@ export function getCastByMovieId(id: number): Promise<Cast[]> {
             name: cast.name,
             character: cast.character,
             photo: cast.profile_path,
+            order: cast.order,
           } as Cast)
       );
     })
@@ -71,6 +73,7 @@ export function getSimliarById(id: number): Promise<Movie[]> {
           backdrop: movie.backdrop_path,
           title: movie.title,
           rating: movie.vote_average,
+          id: movie.id,
         } as Movie)
     );
   });
@@ -120,4 +123,52 @@ export function getMovieById(id: number): Promise<Movie> {
       console.error("Error:", err);
       throw err;
     });
+}
+
+export function getUpcomingMovies(page: number): Promise<Movie[]> {
+  return fetch(
+    `https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=${page}`,
+    options
+  )
+    .then(async (res) => {
+      const response = await res.json();
+      return response.results.map(
+        (movie: any) =>
+          ({
+            id: movie.id,
+            poster: movie.poster_path,
+            title: movie.title,
+            rating: movie.vote_average,
+            language: movie.original_language,
+            date: movie.release_date,
+            runtime: movie.runtime,
+            genres: movie.genres,
+          } as Movie)
+      );
+    })
+    .catch((err) => console.error("error:" + err));
+}
+
+export function getTopRatedMovies(page: number): Promise<Movie[]> {
+  return fetch(
+    `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=${page}`,
+    options
+  )
+    .then(async (res) => {
+      const response = await res.json();
+      return response.results.map(
+        (movie: any) =>
+          ({
+            id: movie.id,
+            poster: movie.poster_path,
+            title: movie.title,
+            rating: movie.vote_average,
+            language: movie.original_language,
+            date: movie.release_date,
+            runtime: movie.runtime,
+            genres: movie.genres,
+          } as Movie)
+      );
+    })
+    .catch((err) => console.error("error:" + err));
 }

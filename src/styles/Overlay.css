@@ -26,6 +26,11 @@
   z-index: 2;
 }
 
+@media screen and (max-width: 767px) {
+  .overlay-info {
+    margin: 64px 16px;
+  }
+}
 .overlay-details > * {
   margin: 0;
 }

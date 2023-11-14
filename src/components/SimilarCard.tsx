@@ -2,7 +2,7 @@ import React from "react";
 
 import starIcon from "../images/star-icon.svg";
 
-export default function SimilarCard(props) {
+export default function SimilarCard(props : any) {
   return (
     <div style={{ width: "280px" }}>
       <div
@@ -16,7 +16,8 @@ export default function SimilarCard(props) {
         <img
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
           src={`https://image.tmdb.org/t/p/w500${props.url}`}
-        ></img>
+          alt="movie poster"
+        />
       </div>
       <div>
         <p

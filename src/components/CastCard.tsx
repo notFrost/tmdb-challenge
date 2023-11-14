@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CastCard(props) {
+export default function CastCard(props : any) {
   return (
     <div className="container">
       <div className="row">
@@ -21,11 +21,11 @@ export default function CastCard(props) {
           <img
             style={{ width: "48px", height: "auto", objectFit: "cover" }}
             src={`https://image.tmdb.org/t/p/w500${props.url}`}
-            alt="cast image"
+            alt=""
           />
         </div>
         <div className="col-8 my-auto">
-          <h4
+          <p
             style={{
               color: "#000",
               fontFamily: "DM Sans",
@@ -33,18 +33,20 @@ export default function CastCard(props) {
               fontStyle: "normal",
               fontWeight: 700,
               lineHeight: "24px",
+              whiteSpace: "nowrap",
               letterSpacing: "0.08px",
               marginBottom: "0px",
             }}
           >
             {props.name}
-          </h4>
-          <h6
+          </p>
+          <p
             style={{
               color: "#9CA4AB",
               fontFamily: "DM Sans",
               fontSize: "12px",
               fontStyle: "normal",
+              whiteSpace: "nowrap",
               fontWeight: 500,
               lineHeight: "20px",
               letterSpacing: "0.06px",
@@ -52,7 +54,7 @@ export default function CastCard(props) {
             }}
           >
             {props.character}
-          </h6>
+          </p>
         </div>
       </div>
     </div>

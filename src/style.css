@@ -2,6 +2,11 @@
   font-family: "DM Sans", sans-serif;
 }
 
+.global-container {
+  padding: 0 96px; /* Adjust the horizontal padding as needed */
+  margin: 0 auto; /* Centers the content */
+}
+
 .header--title {
   color: #000;
   font-size: 36px;
@@ -12,25 +17,34 @@
   margin-right: 56px;
 }
 
-.header--container > p {
-  color: #000;
-  font-family: DM Sans;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.media-container > p {
-  color: #000;
-  font-family: DM Sans;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.08px;
+@media screen and (max-width: 767px) {
+  .global-container {
+    padding: 0 42px;
+  }
 }
 .header--container {
-  margin: 136px 96px 56px;
+  margin-bottom: 56px;
+}
+
+ul {
+  font-family: DM Sans !important;
+  font-size: 18px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  gap: 32px;
+  line-height: normal !important;
+}
+
+.nav-link {
+  color: black !important;
+}
+
+.nav-link.opaque {
+  opacity: 0.4 !important;
+}
+
+.nav-link.active {
+  color: #be123c !important;
 }
 
 .mb-12 {
@@ -62,4 +76,8 @@
 .similar-icon {
   width: 18px;
   height: 18px;
+}
+
+.tab-style {
+  cursor: pointer;
 }
