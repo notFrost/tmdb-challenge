@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/tmdb-challenge/static/css/main.9fcbd168.css",
-    "main.js": "/tmdb-challenge/static/js/main.1c5484a2.js",
+    "main.css": "/tmdb-challenge/static/css/main.d97196cc.css",
+    "main.js": "/tmdb-challenge/static/js/main.b7ad1bc9.js",
     "static/media/company-logo.png": "/tmdb-challenge/static/media/company-logo.e6eb5619e46a23894362.png",
     "static/media/rotten_tomatoes-logo.png": "/tmdb-challenge/static/media/rotten_tomatoes-logo.052742e1e45cc571a3c4.png",
     "static/media/imdb-logo.png": "/tmdb-challenge/static/media/imdb-logo.1fd6c3b4360078e11b0d.png",
-    "static/media/iconoir_cinema-old.svg": "/tmdb-challenge/static/media/iconoir_cinema-old.b89e7310beb09e95ab5b2c8e7f6f87ec.svg",
-    "static/media/thumb_up-icon.svg": "/tmdb-challenge/static/media/thumb_up-icon.8be8854d204a983f803b561f70ebc704.svg",
+    "static/media/thumb_up-icon.svg": "/tmdb-challenge/static/media/thumb_up-icon.c451cea66dbe7d2a43b7093a66ebd146.svg",
     "index.html": "/tmdb-challenge/index.html",
-    "static/media/share-icon.svg": "/tmdb-challenge/static/media/share-icon.df2a386b572e04bf98ce0b3da424ad1b.svg",
-    "static/media/star-icon.svg": "/tmdb-challenge/static/media/star-icon.5b65cfe4a0dc1382d848ce60efb97085.svg",
-    "static/media/play-icon.svg": "/tmdb-challenge/static/media/play-icon.dc1ca7e3180e35aa1c3b9f1a9315d7a4.svg",
-    "static/media/download-icon.svg": "/tmdb-challenge/static/media/download-icon.79887ac09343f224a80dc149580b1680.svg",
-    "static/media/bookmark-icon.svg": "/tmdb-challenge/static/media/bookmark-icon.7c45200dda884d3202afeefd4fbbc322.svg",
-    "main.9fcbd168.css.map": "/tmdb-challenge/static/css/main.9fcbd168.css.map",
-    "main.1c5484a2.js.map": "/tmdb-challenge/static/js/main.1c5484a2.js.map"
+    "static/media/share-icon.svg": "/tmdb-challenge/static/media/share-icon.de3617d9b13a52217612569f53c9b1f6.svg",
+    "static/media/star-icon.svg": "/tmdb-challenge/static/media/star-icon.55741d77dcf0a24526eb34ce257ed482.svg",
+    "static/media/play-icon.svg": "/tmdb-challenge/static/media/play-icon.f87656fee340e150777d46deba39851d.svg",
+    "static/media/download-icon.svg": "/tmdb-challenge/static/media/download-icon.3c720f49c5a5bedfae7d606376f832ba.svg",
+    "static/media/bookmark-icon.svg": "/tmdb-challenge/static/media/bookmark-icon.2ce52e05cd0a47b98759c7c1ba795d9b.svg",
+    "main.d97196cc.css.map": "/tmdb-challenge/static/css/main.d97196cc.css.map",
+    "main.b7ad1bc9.js.map": "/tmdb-challenge/static/js/main.b7ad1bc9.js.map"
   },
   "entrypoints": [
-    "static/css/main.9fcbd168.css",
-    "static/js/main.1c5484a2.js"
+    "static/css/main.d97196cc.css",
+    "static/js/main.b7ad1bc9.js"
   ]
 }
