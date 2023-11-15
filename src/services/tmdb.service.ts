@@ -112,6 +112,7 @@ export function getMovieById(id: number): Promise<Movie> {
       const response = await res.json();
       return {
         backdrop: response.backdrop_path,
+        poster: response.poster_path,
         title: response.title,
         date: response.release_date,
         overview: response.overview,

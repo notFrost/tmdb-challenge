@@ -43,7 +43,7 @@ export default function Overlay(props: any) {
         left="0"
         zIndex="2"
       >
-        <Stack padding="64px" mt="auto" px={{ base: "32px", lg: "72px" }}>
+        <Stack padding="64px" mt="auto" px={{ base: "16px", lg: "72px" }}>
           <Flex display={{ base: "block", lg: "flex" }}>
             <Box
               height="648px"
@@ -115,6 +115,7 @@ export default function Overlay(props: any) {
                   fontWeight="700"
                   lineHeight="22px"
                   letterSpacing="0.07px"
+                  cursor="pointer"
                 >
                   Continue Watching
                 </Button>
@@ -131,6 +132,7 @@ export default function Overlay(props: any) {
                   fontWeight="700"
                   lineHeight="22px"
                   letterSpacing="0.07px"
+                  cursor="pointer"
                 >
                   Add Watchlist
                 </Button>
@@ -154,6 +156,7 @@ export default function Overlay(props: any) {
                   fontWeight="700"
                   lineHeight="22px"
                   letterSpacing="0.07px"
+                  cursor="pointer"
                 >
                   Download
                 </Button>
@@ -169,6 +172,7 @@ export default function Overlay(props: any) {
                   fontWeight="700"
                   lineHeight="22px"
                   letterSpacing="0.07px"
+                  cursor="pointer"
                 >
                   Share
                 </Button>
@@ -184,6 +188,7 @@ export default function Overlay(props: any) {
                   fontWeight="700"
                   lineHeight="22px"
                   letterSpacing="0.07px"
+                  cursor="pointer"
                 >
                   Like
                 </Button>

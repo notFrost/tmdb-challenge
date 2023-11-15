@@ -16,8 +16,6 @@ import SimilarCard from "../components/SimilarCard";
 import {
   AspectRatio,
   Box,
-  Flex,
-  HStack,
   SimpleGrid,
   Stack,
   Tab,
@@ -27,6 +25,7 @@ import {
   TabPanels,
   Tabs,
   Text,
+  Image,
 } from "@chakra-ui/react";
 
 export default function MoviePage(props: any) {
@@ -164,14 +163,28 @@ export default function MoviePage(props: any) {
                 <AspectRatio ratio={27 / 10}>
                   <iframe
                     src={`https://www.youtube.com/embed/${video}`}
-                    className="object-fit-cover"
                     title="YouTube video player"
                   ></iframe>
                 </AspectRatio>
               </TabPanel>
-              <TabPanel padding="0"></TabPanel>
-              <TabPanel padding="0"></TabPanel>
-              <TabPanel padding="0"></TabPanel>
+              <TabPanel padding="32px 0px">
+                <AspectRatio ratio={16 / 9}>
+                  <iframe
+                    src={`https://www.youtube.com/embed/${video}`}
+                    title="YouTube video player"
+                  ></iframe>
+                </AspectRatio>
+              </TabPanel>
+              <TabPanel padding="32px 0px">
+                <Image
+                  src={`https://image.tmdb.org/t/p/original${currentMovie.backdrop}`}
+                ></Image>
+              </TabPanel>
+              <TabPanel padding="32px 0px">
+                <Image
+                  src={`https://image.tmdb.org/t/p/original${currentMovie.poster}`}
+                ></Image>
+              </TabPanel>
             </TabPanels>
           </Tabs>
         </Stack>
