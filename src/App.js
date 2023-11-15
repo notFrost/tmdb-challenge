@@ -1,6 +1,5 @@
 import Home from "./pages/Home.tsx";
 import MoviePage from "./pages/MoviePage.tsx";
-import MovieCard from "./components/MovieCard.tsx";
 import {
   BrowserRouter as Router,
   Routes,
@@ -8,7 +7,6 @@ import {
   Navigate,
 } from "react-router-dom";
 
-import "./style.css";
 import ScrollToTop from "./services/scrollTopTop.js";
 
 export default function App() {

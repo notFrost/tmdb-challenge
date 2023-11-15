@@ -1,5 +1,6 @@
 import rottenTomatoesLogo from "../images/rotten_tomatoes-logo.png";
 import imdbLogo from "../images/imdb-logo.png";
+import heartIcon from "../images/heart-icon.svg";
 import {
   Card,
   CardBody,
@@ -9,11 +10,12 @@ import {
   Text,
   Flex,
   Spacer,
+  Box,
 } from "@chakra-ui/react";
 
 export default function MovieCard(props: any) {
   return (
-    <Card width="250px" shadow="none" className="grow-animation">
+    <Card width="250px" shadow="none" borderRadius="0">
       <CardBody p="0" width="250px">
         <Image
           src={`https://image.tmdb.org/t/p/w500${props.url}`}
@@ -72,6 +74,18 @@ export default function MovieCard(props: any) {
             Action, Adventure, Horror
           </Text>
         </Stack>
+        <Image
+          width="30px"
+          height="30px"
+          src={heartIcon}
+          backgroundColor="rgba(243, 244, 246, 0.50)"
+          backdropFilter="blur(1px)"
+          padding="5px"
+          borderRadius="50%"
+          position="absolute"
+          top="16px"
+          right="16px"
+        ></Image>
       </CardBody>
     </Card>
   );

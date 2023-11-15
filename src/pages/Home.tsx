@@ -91,7 +91,7 @@ export default function Home() {
           </TabList>
         </Box>
         <TabIndicator
-          mt={{ base: "0", lg: "-6.5px" }}
+          mt={{ base: "2", lg: "-6.5px" }}
           height="3px"
           bg="#BE123C"
           fontWeight="700"
@@ -150,6 +150,10 @@ function MoviesList({ movies }: { movies: Movie[] }) {
           onClick={() => navigate(`/movie/${movie.id}`)}
           cursor="pointer"
           mx="auto"
+          _hover={{
+            boxShadow: "0 5px 0 rgba(190, 18, 60, 1)",
+            transition: "box-shadow 0.15s ease-in-out",
+          }}
         >
           <MovieCard
             url={movie.poster}

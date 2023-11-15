@@ -204,6 +204,7 @@ export default function MoviePage(props: any) {
                 onClick={() => navigate(`/movie/${movie.id}`)}
                 cursor="pointer"
                 mx="auto"
+                mb="24px"
               >
                 {" "}
                 <SimilarCard
