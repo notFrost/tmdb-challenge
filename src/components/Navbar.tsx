@@ -1,57 +1,61 @@
-import React from "react";
 import companyLogo from "../images/company-logo.png";
 import burgerIcon from "../images/burger-icon.png";
 import { useNavigate } from "react-router-dom";
 
-import "../styles/Navbar.css";
+import { Flex, Image, Text, Input, Box } from "@chakra-ui/react";
 
 export default function Navbar(props: any) {
   const navigate = useNavigate();
   return (
-    <div>
-      <nav
-        className={`navbar row py-0`}
-        style={{
-          position: props.absolute ? "absolute" : "relative",
-          paddingInline: props.absolute ? "96px" : "0",
-        }}
+    <Flex align="center" justifyContent="space-between" py="15px">
+      <Flex
+        align="center"
+        mx={{ base: "auto", md: "0" }}
+        onClick={() => navigate(`/home`)}
+        cursor="pointer"
       >
-        <div className="container-fluid col-auto col-lg-4">
-          <a
-            className={`navbar-brand d-flex align-items-center py-0 ${
-              props.alt ? "alt" : ""
-            }`}
-            onClick={() => {
-              navigate("/");
-            }}
-          >
-            <img
-              src={companyLogo}
-              alt="Logo"
-              width="30"
-              height="24"
-              className="d-inline-block align-text-top logo--image me-4"
-            />
-            MovieBox
-          </a>
-        </div>
-        <div className="container-fliud col-5 d-none d-lg-block">
-          <form className="d-flex" role="search">
-            <input
-              className={`form-control me-2 ${props.alt}`}
-              type="search"
-              placeholder="What do you want to watch?"
-              aria-label="Search"
-            />
-          </form>
-        </div>
-        <div className="container-fluid col-3 d-none d-lg-flex">
-          <p className={`my-auto navbar-signin ${props.alt}`}>Sign in</p>
-          <div className="burger-circle">
-            <img src={burgerIcon}></img>
-          </div>
-        </div>
-      </nav>
-    </div>
+        <Image
+          boxSize="100px"
+          objectFit="cover"
+          width="50px"
+          height="50px"
+          src={companyLogo}
+          alt="Company Logo"
+          me="24px"
+        />
+        <Image />
+        <Text
+          fontSize="24px"
+          fontWeight="700"
+          lineHeight="24px"
+          color={props.alt ? "white" : "black"}
+        >
+          MovieBox
+        </Text>
+      </Flex>
+      <Box display={{ base: "none", xl: "block" }}>
+        <Input
+          placeholder="What do you want to watch?"
+          width="525px"
+          _placeholder={props.alt ? { color: "white" } : { color: "black" }}
+        ></Input>
+      </Box>
+      <Flex
+        align="center"
+        cursor="pointer"
+        display={{ base: "none", md: "flex" }}
+      >
+        <Text color={props.alt ? "white" : "black"}>Sign in</Text>
+        <Image
+          src={burgerIcon}
+          width="36px"
+          height="36px"
+          backgroundColor="#be123c"
+          borderRadius="50%"
+          padding="6px"
+          ms="26px"
+        ></Image>
+      </Flex>
+    </Flex>
   );
 }

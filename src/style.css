@@ -1,83 +1,11 @@
 * {
-  font-family: "DM Sans", sans-serif;
 }
 
-.global-container {
-  padding: 0 96px; /* Adjust the horizontal padding as needed */
-  margin: 0 auto; /* Centers the content */
+/*Animations*/
+.grow-animation {
+  transition: transform 0.3s ease-in-out;
 }
 
-.header--title {
-  color: #000;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  margin: 0px;
-  margin-right: 56px;
-}
-
-@media screen and (max-width: 767px) {
-  .global-container {
-    padding: 0 42px;
-  }
-}
-.header--container {
-  margin-bottom: 56px;
-}
-
-ul {
-  font-family: DM Sans !important;
-  font-size: 18px !important;
-  font-style: normal !important;
-  font-weight: 700 !important;
-  gap: 32px;
-  line-height: normal !important;
-}
-
-.nav-link {
-  color: black !important;
-}
-
-.nav-link.opaque {
-  opacity: 0.4 !important;
-}
-
-.nav-link.active {
-  color: #be123c !important;
-}
-
-.mb-12 {
-  margin-bottom: 12px;
-}
-
-.more--button {
-  display: inline-flex;
-  padding: 12px 24px;
-  align-items: center;
-  gap: 8px;
-  border-radius: 32px;
-  border: 2px solid #be123c;
-
-  color: #be123c;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
-.more--button:hover {
-  background: none;
-  border: 2px solid #be123c;
-  color: #be123c;
-  box-shadow: 0 0 10px rgba(190, 18, 60, 0.5);
-}
-
-.similar-icon {
-  width: 18px;
-  height: 18px;
-}
-
-.tab-style {
-  cursor: pointer;
+.grow-animation:hover {
+  transform: scale(1.04);
 }

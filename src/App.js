@@ -1,7 +1,6 @@
-import React from "react";
-
 import Home from "./pages/Home.tsx";
 import MoviePage from "./pages/MoviePage.tsx";
+import MovieCard from "./components/MovieCard.tsx";
 import {
   BrowserRouter as Router,
   Routes,

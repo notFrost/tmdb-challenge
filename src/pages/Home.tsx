@@ -1,5 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import {
+  SimpleGrid,
+  Box,
+  Text,
+  Button,
+  Center,
+  Tabs,
+  TabList,
+  Tab,
+  TabIndicator,
+  TabPanels,
+  TabPanel,
+  Flex,
+} from "@chakra-ui/react";
 
 import {
   getPopularMoviesDB,
@@ -8,164 +22,143 @@ import {
   Movie,
 } from "../services/tmdb.service";
 
-import Card from "../components/Card";
+import MovieCard from "../components/MovieCard";
 import Navbar from "../components/Navbar";
 
-export default function Main() {
+import cinemaIcon from "../images/iconoir_cinema-old.svg";
+
+export default function Home() {
   const [popularMoviesDB, setPopularMoviesDB] = useState<Movie[]>([]);
   const [upcomingMovies, setUpcomingMovies] = useState<Movie[]>([]);
   const [topRatedMovies, setTopRatedMovies] = useState<Movie[]>([]);
   const [pageCount, setPageCount] = useState<number>(1);
-  const [activeTab, setActiveTab] = useState<string>("popular");
 
   useEffect(() => {
-    if (activeTab === "popular") {
-      getPopularMoviesDB(pageCount).then((movies: Movie[]) => {
-        setPopularMoviesDB((prevState) => [...prevState, ...movies]);
-      });
-    } else if (activeTab === "premiere") {
-      getUpcomingMovies(pageCount).then((movies: Movie[]) => {
-        setUpcomingMovies((prevState) => [...prevState, ...movies]);
-      });
-    } else if (activeTab === "release") {
-      getTopRatedMovies(pageCount).then((movies: Movie[]) => {
-        setTopRatedMovies((prevState) => [...prevState, ...movies]);
-      });
-    }
-  }, [pageCount, activeTab]);
+    getPopularMoviesDB(pageCount).then((movies: Movie[]) => {
+      setPopularMoviesDB((prevState) => [...prevState, ...movies]);
+    });
 
-  function handleTabChange(newTab: string) {
-    setPopularMoviesDB([]);
-    setUpcomingMovies([]);
-    setTopRatedMovies([]);
-    setActiveTab(newTab);
-    setPageCount(1); // Reset page count
-  }
+    getUpcomingMovies(pageCount).then((movies: Movie[]) => {
+      setUpcomingMovies((prevState) => [...prevState, ...movies]);
+    });
+
+    getTopRatedMovies(pageCount).then((movies: Movie[]) => {
+      setTopRatedMovies((prevState) => [...prevState, ...movies]);
+    });
+  }, [pageCount]);
 
   function handleViewMore() {
     setPageCount((prevState) => prevState + 1);
   }
 
   return (
-    <div>
-      <div className="global-container">
-        <Navbar alt={false} />
-        <header className="d-flex header--container align-items-center">
-          <h1 className="header--title">Movie listings</h1>
-          <ul className="nav nav-underline">
-            <li className="nav-item">
-              <a
-                className={`nav-link ${
-                  activeTab === "popular" ? "active" : ""
-                }`}
-                onClick={() => handleTabChange("popular")}
-              >
-                Popular
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className={`nav-link ${
-                  activeTab === "premiere" ? "active" : ""
-                }`}
-                onClick={() => handleTabChange("premiere")}
-              >
-                Premiere
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className={`nav-link ${
-                  activeTab === "release" ? "active" : ""
-                }`}
-                onClick={() => handleTabChange("release")}
-              >
-                For release
-              </a>
-            </li>
-          </ul>
-        </header>
-        <div className="tab-content">
-          <div
-            className={`tab-pane fade ${
-              activeTab === "popular" ? "show active" : ""
-            }`}
-          >
-            {popularMoviesDB ? (
-              <MoviesList movies={popularMoviesDB} />
-            ) : (
-              <h1>Loading...</h1>
-            )}
-          </div>
-          <div
-            className={`tab-pane fade ${
-              activeTab === "premiere" ? "show active" : ""
-            }`}
-          >
-            {/* Content for Premiere movies */}
-            {upcomingMovies ? (
-              <MoviesList movies={upcomingMovies} />
-            ) : (
-              <h1>Loading...</h1>
-            )}
-          </div>
-          <div
-            className={`tab-pane fade ${
-              activeTab === "release" ? "show active" : ""
-            } `}
-          >
-            {/* Content for For Release movies */}
-            {topRatedMovies ? (
-              <MoviesList movies={topRatedMovies} />
-            ) : (
-              <h1>Loading...</h1>
-            )}
-          </div>
-        </div>
-        <div className="d-flex justify-content-center mb-5">
-          <button
+    <Box mx={{ base: "32px", md: "96px" }}>
+      <Navbar />
+      <Tabs
+        position="relative"
+        variant="unstyled"
+        mt={{ base: "32px", md: "56px" }}
+      >
+        <Box display={{ base: "block", lg: "flex" }}>
+          <Text fontSize="36px" fontWeight="700" lineHeight="normal" me="72px">
+            Movie listings
+          </Text>
+          <TabList gap="32px">
+            <Tab
+              fontSize="18px"
+              fontWeight="400"
+              lineHeight="normal"
+              padding="0px"
+            >
+              Popular
+            </Tab>
+            <Tab
+              fontSize="18px"
+              fontWeight="400"
+              lineHeight="normal"
+              padding="0px"
+            >
+              Premiere
+            </Tab>
+            <Tab
+              fontSize="18px"
+              fontWeight="400"
+              lineHeight="normal"
+              padding="0px"
+            >
+              For release
+            </Tab>
+          </TabList>
+        </Box>
+        <TabIndicator
+          mt="-6.5px"
+          height="3px"
+          bg="#BE123C"
+          fontWeight="700"
+          width="32px"
+        />
+        <TabPanels>
+          <TabPanel padding="0">
+            <MoviesList movies={popularMoviesDB} />
+          </TabPanel>
+          <TabPanel padding="0">
+            <MoviesList movies={topRatedMovies} />
+          </TabPanel>
+          <TabPanel padding="0">
+            <MoviesList movies={upcomingMovies} />
+          </TabPanel>
+        </TabPanels>
+        <Center pb="60px">
+          <Button
+            display="inline-flex"
+            padding="12px 24px"
+            alignItems="center"
+            gap="8px"
+            borderRadius="32px"
+            borderWidth="2px"
+            borderStyle="solid"
+            borderColor="#BE123C"
+            background="none"
+            leftIcon={<img src={cinemaIcon} alt="Cinema Icon" />}
             onClick={handleViewMore}
-            type="button"
-            className="btn more--button"
+            color="#BE123C"
+            fontSize="14px"
+            fontWeight="700"
+            lineHeight="normal"
           >
-            <img src="/public/images/iconoir_cinema-old.svg" alt=""></img>
+            {" "}
             View more
-          </button>
-        </div>
-      </div>
-    </div>
+          </Button>
+        </Center>
+      </Tabs>
+    </Box>
   );
 }
 
 function MoviesList({ movies }: { movies: Movie[] }) {
+  const navigate = useNavigate();
   return (
-    <div className="container-fluid movie--container">
-      <div className="row gy-5 pt-1 pb-4">
-        {movies.map((movie) => (
-          <div
-            key={movie.id}
-            className="col-xl-3 col-lg-4 col-md-6 d-flex justify-content-around"
-          >
-            <Link
-              to={`/movie/${movie.id}`}
-              style={{
-                textDecoration: "none",
-                color: "inherit",
-                cursor: "pointer",
-              }}
-            >
-              <Card
-                url={movie.poster}
-                title={movie.title}
-                rating={movie.rating}
-                date={movie.date}
-                language={movie.language}
-                genres={movie.genres}
-              />
-            </Link>
-          </div>
-        ))}
-      </div>
-    </div>
+    <SimpleGrid
+      minChildWidth="250px"
+      spacing="80px"
+      justifyContent="space-between" /*TODO: Fix*/
+      my="56px"
+    >
+      {movies.map((movie) => (
+        <Box
+          key={movie.id}
+          onClick={() => navigate(`/movie/${movie.id}`)}
+          cursor="pointer"
+          mx="auto"
+        >
+          <MovieCard
+            url={movie.poster}
+            title={movie.title}
+            rating={movie.rating}
+            date={movie.date}
+          />
+        </Box>
+      ))}
+    </SimpleGrid>
   );
 }
