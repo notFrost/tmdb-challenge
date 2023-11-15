@@ -117,9 +117,9 @@ export default function MoviePage(props: any) {
           </Text>
 
           <Tabs position="relative" variant="unstyled">
-            <TabList gap="24px">
+            <TabList gap={{ base: "20px", sm: "24px" }}>
               <Tab
-                fontSize="18px"
+                fontSize={{ base: "16px", sm: "18px" }}
                 fontWeight="400"
                 lineHeight="normal"
                 padding="0px 0px 10px"
@@ -128,7 +128,7 @@ export default function MoviePage(props: any) {
                 Most Popular
               </Tab>
               <Tab
-                fontSize="18px"
+                fontSize={{ base: "16px", sm: "18px" }}
                 fontWeight="400"
                 lineHeight="normal"
                 padding="0px 0px 10px"
@@ -136,7 +136,7 @@ export default function MoviePage(props: any) {
                 Videos
               </Tab>
               <Tab
-                fontSize="18px"
+                fontSize={{ base: "16px", sm: "18px" }}
                 fontWeight="400"
                 lineHeight="normal"
                 padding="0px 0px 10px"
@@ -144,7 +144,7 @@ export default function MoviePage(props: any) {
                 Backdrops
               </Tab>
               <Tab
-                fontSize="18px"
+                fontSize={{ base: "16px", sm: "18px" }}
                 fontWeight="400"
                 lineHeight="normal"
                 padding="0px 0px 10px"

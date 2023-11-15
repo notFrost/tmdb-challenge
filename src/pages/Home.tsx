@@ -63,7 +63,7 @@ export default function Home() {
           <Text fontSize="36px" fontWeight="700" lineHeight="normal" me="72px">
             Movie listings
           </Text>
-          <TabList gap="32px">
+          <TabList gap="32px" mt={{ base: "16px", lg: "0" }}>
             <Tab
               fontSize="18px"
               fontWeight="400"
@@ -91,7 +91,7 @@ export default function Home() {
           </TabList>
         </Box>
         <TabIndicator
-          mt="-6.5px"
+          mt={{ base: "0", lg: "-6.5px" }}
           height="3px"
           bg="#BE123C"
           fontWeight="700"
