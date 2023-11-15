@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/main.a59eb6a6.css","mappings":"AAIA,gBACE,oCACF,CAEA,sBACE,qBACF","sources":["style.css"],"sourcesContent":["* {\r\n}\r\n\r\n/*Animations*/\r\n.grow-animation {\r\n  transition: transform 0.3s ease-in-out;\r\n}\r\n\r\n.grow-animation:hover {\r\n  transform: scale(1.04);\r\n}\r\n"],"names":[],"sourceRoot":""}

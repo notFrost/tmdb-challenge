@@ -1,7 +1,6 @@
 {
   "files": {
-    "main.css": "/tmdb-challenge/static/css/main.a59eb6a6.css",
-    "main.js": "/tmdb-challenge/static/js/main.29e45cf2.js",
+    "main.js": "/tmdb-challenge/static/js/main.ac0b8df5.js",
     "static/media/company-logo.png": "/tmdb-challenge/static/media/company-logo.e6eb5619e46a23894362.png",
     "static/media/rotten_tomatoes-logo.png": "/tmdb-challenge/static/media/rotten_tomatoes-logo.052742e1e45cc571a3c4.png",
     "static/media/imdb-logo.png": "/tmdb-challenge/static/media/imdb-logo.1fd6c3b4360078e11b0d.png",
@@ -11,13 +10,12 @@
     "static/media/share-icon.svg": "/tmdb-challenge/static/media/share-icon.de3617d9b13a52217612569f53c9b1f6.svg",
     "static/media/star-icon.svg": "/tmdb-challenge/static/media/star-icon.55741d77dcf0a24526eb34ce257ed482.svg",
     "static/media/play-icon.svg": "/tmdb-challenge/static/media/play-icon.f87656fee340e150777d46deba39851d.svg",
+    "static/media/heart-icon.svg": "/tmdb-challenge/static/media/heart-icon.ad9dcc7b67481d76c818ba8edefe965a.svg",
     "static/media/download-icon.svg": "/tmdb-challenge/static/media/download-icon.3c720f49c5a5bedfae7d606376f832ba.svg",
     "static/media/bookmark-icon.svg": "/tmdb-challenge/static/media/bookmark-icon.2ce52e05cd0a47b98759c7c1ba795d9b.svg",
-    "main.a59eb6a6.css.map": "/tmdb-challenge/static/css/main.a59eb6a6.css.map",
-    "main.29e45cf2.js.map": "/tmdb-challenge/static/js/main.29e45cf2.js.map"
+    "main.ac0b8df5.js.map": "/tmdb-challenge/static/js/main.ac0b8df5.js.map"
   },
   "entrypoints": [
-    "static/css/main.a59eb6a6.css",
-    "static/js/main.29e45cf2.js"
+    "static/js/main.ac0b8df5.js"
   ]
 }
