@@ -10,6 +10,7 @@ import {
   Movie,
   Cast,
   getVideoByMovieId,
+  getAltVideoByMovieId,
   getSimliarById,
 } from "../services/tmdb.service";
 import SimilarCard from "../components/SimilarCard";
@@ -32,6 +33,7 @@ export default function MoviePage(props: any) {
   const [currentMovie, setCurrentMovie] = useState<Movie>({} as Movie);
   const [similarMovies, setSimliarMovies] = useState<Movie[]>([]);
   const [cast, setCast] = useState<Cast[]>([]);
+  const [altVideo, setAltVideo] = useState<String>("");
   const [video, setVideo] = useState<String>("");
   const { movieId } = useParams();
   const navigate = useNavigate();
@@ -47,16 +49,13 @@ export default function MoviePage(props: any) {
     getVideoByMovieId(Number(movieId)).then((url: String) => {
       setVideo(url);
     });
+    getAltVideoByMovieId(Number(movieId)).then((url: String) => {
+      setAltVideo(url);
+    });
     getSimliarById(Number(movieId)).then((movies: Movie[]) => {
       setSimliarMovies(movies);
     });
   }, [movieId]);
-
-  function handleChange(movieId: Number) {
-    getMovieById(Number(movieId)).then((movie: Movie) => {
-      setCurrentMovie(movie);
-    });
-  }
 
   return (
     <Box>
@@ -160,7 +159,7 @@ export default function MoviePage(props: any) {
             />
             <TabPanels>
               <TabPanel padding="32px 0px">
-                <AspectRatio ratio={27 / 10}>
+                <AspectRatio ratio={16 / 9}>
                   <iframe
                     src={`https://www.youtube.com/embed/${video}`}
                     title="YouTube video player"
@@ -170,7 +169,7 @@ export default function MoviePage(props: any) {
               <TabPanel padding="32px 0px">
                 <AspectRatio ratio={16 / 9}>
                   <iframe
-                    src={`https://www.youtube.com/embed/${video}`}
+                    src={`https://www.youtube.com/embed/${altVideo}`}
                     title="YouTube video player"
                   ></iframe>
                 </AspectRatio>

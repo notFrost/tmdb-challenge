@@ -39,7 +39,17 @@ export function getVideoByMovieId(id: number): Promise<string> {
     })
     .catch((err) => console.error("error:" + err));
 }
-
+export function getAltVideoByMovieId(id: number): Promise<string> {
+  return fetch(
+    `https://api.themoviedb.org/3/movie/${id}/videos?language=en-US`,
+    options
+  )
+    .then(async (res) => {
+      const response = await res.json();
+      return response.results[1].key;
+    })
+    .catch((err) => console.error("error:" + err));
+}
 export function getCastByMovieId(id: number): Promise<Cast[]> {
   return fetch(
     `https://api.themoviedb.org/3/movie/${id}/credits?language=en-US`,
